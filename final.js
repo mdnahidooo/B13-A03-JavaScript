@@ -31,7 +31,7 @@ function validOtp(otp) {
 function finalScore(omr) {
     const totalQuestionMark = omr.right + omr.wrong + omr.skip;
 
-    if (typeof omr !== 'object' || Array.isArray(omr) ===true || totalQuestionMark < 0 || totalQuestionMark > 100) {
+    if (typeof omr !== 'object' || Array.isArray(omr) ===true || totalQuestionMark !== 100) {
         return 'Invalid'
     }
     const rightAnswerPoint = omr.right * 1;
@@ -104,4 +104,5 @@ function analyzeText(str) {
         token: token,
     };
 }
+
 

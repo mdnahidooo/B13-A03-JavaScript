@@ -2,7 +2,7 @@
 function finalScore(omr) {
     const totalQuestionMark = omr.right + omr.wrong + omr.skip;
 
-    if (typeof omr !== 'object' || Array.isArray(omr) ===true || totalQuestionMark < 0 || totalQuestionMark > 100) {
+    if (typeof omr !== 'object' || Array.isArray(omr) ===true || totalQuestionMark !== 100) {
         return 'Invalid'
     }
     const rightAnswerPoint = omr.right * 1;
@@ -12,5 +12,5 @@ function finalScore(omr) {
     return Math.round(totalMark);
 }
 
-// const output = finalScore({ right: 67, wrong: 23, skip: 10 });
+// const output = finalScore({ right: 30, wrong: 30, skip: 40 });
 // console.log(output);

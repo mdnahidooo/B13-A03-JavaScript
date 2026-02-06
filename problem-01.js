@@ -10,5 +10,5 @@ function newPrice(currentPrice, discount) {
     return afterDiscountTotalPrice.toFixed(3);
 }
 
-// const output = newPrice(2000, 0);
+// const output = newPrice("1000", 10);
 // console.log(output);
